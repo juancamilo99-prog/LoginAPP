@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.loginapp.controller.AdminController">
+   <top>
+      <Pane prefHeight="60.0" prefWidth="600.0" style="-fx-background-color: #97BCE8;" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="857.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADMINISTRADOR:" wrappingWidth="101.22265625">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Text>
+            <Text fx:id="adminName" layoutX="965.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="107.21630859375" />
+            <ImageView fitHeight="56.0" fitWidth="84.0" layoutX="24.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/pngwing.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="87.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Artemisa SL" wrappingWidth="90.21630859375" />
+            <Text layoutX="87.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Administrador FXML" wrappingWidth="117.21630859375" />
+         </children>
+      </Pane>
+   </top>
+   <center>
+      <TabPane prefHeight="242.0" prefWidth="553.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="Gestion de usuarios">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="217.0" prefWidth="563.0">
+                     <children>
+                        <Text layoutX="468.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1. Formulario de Alta" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </Text>
+                        <GridPane hgap="15.0" layoutX="291.0" layoutY="110.0" prefHeight="99.0" prefWidth="515.0" vgap="15.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <TextField fx:id="tfname" promptText="Nombre" />
+                              <TextField fx:id="tfsecondnaem" promptText="Apellido" GridPane.columnIndex="1" />
+                              <TextField fx:id="tfdni" promptText="DNI" GridPane.rowIndex="1" />
+                              <TextField fx:id="tfemail" promptText="Correo" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="tfpassword" promptText="Contraseña" GridPane.rowIndex="2" />
+                              <CheckBox fx:id="checkadmin" contentDisplay="TOP" mnemonicParsing="false" prefHeight="23.0" prefWidth="204.0" text="Administrador" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                           </children>
+                        </GridPane>
+                        <Button fx:id="btnAlta" layoutX="291.0" layoutY="230.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="524.0" style="-fx-background-color: #97BCE8;" text="DAR DE ALTA">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Text layoutX="487.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2. Baja de usuarios" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="removedni" layoutX="445.0" layoutY="329.0" prefHeight="26.0" prefWidth="173.0" promptText="DNI" />
+                        <Button fx:id="btnremove" layoutX="639.0" layoutY="325.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="176.0" style="-fx-background-color: #E04B28;" text="ELIMINAR" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Text layoutX="490.0" layoutY="411.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3. Cambio de contraseña" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="updatedni" layoutX="291.0" layoutY="444.0" prefHeight="26.0" prefWidth="173.0" promptText="DNI" />
+                        <TextField fx:id="newpassword" layoutX="478.0" layoutY="444.0" prefHeight="26.0" prefWidth="201.0" promptText="Nueva contraseña" />
+                        <Button fx:id="btnupdatepassword" layoutX="698.0" layoutY="440.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="117.0" style="-fx-background-color: #97BCE8;" text="ACTUALIZAR" />
+                        <Text fx:id="txtError" layoutX="386.0" layoutY="533.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="324.9830722808838">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Visualizacion y consultas">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Text layoutX="55.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BUSCADOR:">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="searchdni" layoutX="134.0" layoutY="28.0" prefHeight="26.0" prefWidth="179.0" promptText="Ingrese DNI a buscar" />
+                        <Button fx:id="btnsearchdni" layoutX="327.0" layoutY="25.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="103.0" style="-fx-background-color: #97BCE8;" text="BUSCAR" />
+                        <Button fx:id="btnclean" layoutX="443.0" layoutY="26.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="103.0" style="-fx-background-color: #97BCE8;" text="LIMPIAR" />
+                        <TableView fx:id="tablesearchemployed" layoutX="1.0" layoutY="69.0" prefHeight="526.0" prefWidth="1080.0">
+                          <columns>
+                            <TableColumn fx:id="tabledni" prefWidth="118.0" text="DNI" />
+                            <TableColumn fx:id="tablename" prefWidth="253.0" text="NOMBRE" />
+                              <TableColumn fx:id="tablesecondname" prefWidth="262.0" text="APELLIDO" />
+                              <TableColumn fx:id="tableEmail" prefWidth="230.0" text="CORREO" />
+                              <TableColumn fx:id="tablePassword" prefWidth="125.0" text="CONTRASEÑA" />
+                              <TableColumn fx:id="tableCargo" prefWidth="75.0" text="CARGO" />
+                          </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Registro de jornadas">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Text layoutX="35.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="REGISTROS DE FICHAJE (horas.txt">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="btnload" layoutX="309.0" layoutY="16.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="208.0" style="-fx-background-color: #97BCE8;" text="CARGAR REGISTROS" />
+                        <TextArea fx:id="txtregistros" layoutY="59.0" prefHeight="538.0" prefWidth="1080.0" promptText="Pulse 'CARGAR REGISTROS' para leer el archivo de fichajes." />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>

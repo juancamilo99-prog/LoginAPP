@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.loginapp.MainController">
+   <top>
+      <Pane prefHeight="91.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="218.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ARTEMISA" textAlignment="CENTER" wrappingWidth="199.47412109375">
+               <font>
+                  <Font name="Arial Black" size="32.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="78.0" fitWidth="81.0" layoutX="118.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/pngwing.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </top>
+   <center>
+      <Pane prefHeight="196.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="username" layoutX="207.0" layoutY="91.0" prefHeight="25.0" prefWidth="187.0" promptText="Email" />
+            <TextField fx:id="password" layoutX="206.0" layoutY="130.0" prefHeight="25.0" prefWidth="189.0" promptText="Password" />
+            <Text layoutX="265.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOGIN">
+               <font>
+                  <Font name="Baloo Bhaina 2 Bold" size="25.0" />
+               </font>
+            </Text>
+            <Button fx:id="btnIngresar" layoutX="262.0" layoutY="169.0" mnemonicParsing="false" text="INGRESAR" />
+            <Text layoutX="14.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="v. 1.0.0.1" />
+            <Text fx:id="textError" layoutX="209.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="183.21630859375">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>
